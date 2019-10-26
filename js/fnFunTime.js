@@ -1,3 +1,13 @@
+function getNumArrayFromUser(){
+    var numArr = [];
+        var input = prompt("add a number to the array")
+        while (parseInt(input)){
+            numArr.push(parseInt(input));
+            input = prompt("add another number to the array or just hit enter to signal the arry is complete")
+        }
+        return numArr;
+}
+
 
 function minMaxAvg(numArr){
     var min = numArr[0];
@@ -43,4 +53,36 @@ function fizzBuzz(num){
     }
 
     return str;
+}
+
+
+
+function validBraces(str){
+    console.log(str)
+    var braceObj = {
+        "{": true,
+        "(": true,
+        "[": true,
+
+        "]": "[",
+        "}": "{",
+        ")": "(",
+    }
+    var stack = [];
+
+    for (var i = 0; i < str.length; i++) {
+        var char = str[i];
+        if (braceObj[char]){
+            if ((braceObj[char]) === true){
+                stack.push(char);
+            } else if (braceObj[char] === stack[stack.length-1]){
+                stack.pop();
+            } else {
+                return false;
+            }
+        } 
+        
+    }
+    
+    return stack.length === 0;
 }

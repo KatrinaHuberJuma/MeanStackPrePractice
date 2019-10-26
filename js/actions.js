@@ -1,17 +1,18 @@
 $(document).ready(function(){
     $("#minMaxAvg").click(function(){
-        var numArr = [];
-        var input = prompt("add a number to the array")
-        while (parseInt(input)){
-            numArr.push(parseInt(input));
-            input = prompt("add another number to the array or just hit enter to signal the arry is complete")
-        }
+        var numArr = getNumArrayFromUser();
         alert(minMaxAvg(numArr));
 
     });
     $("#fizzbuzz").click(function(){
         var input = prompt("enter a number");
         alert(fizzBuzz(parseInt(input)));
-
     });
+
+    $("#bracesValid").click(function(){
+        var input = prompt("enter some braces such as ({()}}, {{{}}} or ({()})");
+        alert(validBraces(input));
+    });
+
+    
 });

@@ -21,12 +21,27 @@
                 <p>Create a function called fizzbuzz that accepts a parameter n. 
                     Have the function log all the numbers from 1 to n in order with the following exceptions:</p>
                 <ul>
-                    <p>If the number is divisible by both 3 and 5, log "FizzBuzz" instead of the number</p>
-                    <p>If the number is divisible by 3 but not by 5, log "Fizz" instead of the number</p>
-                    <p>If the number is divisible by 5 but not by 3, log "Buzz" instead of the number</p>
+                    <li>If the number is divisible by both 3 and 5, log "FizzBuzz" instead of the number</li>
+                    <li>If the number is divisible by 3 but not by 5, log "Fizz" instead of the number</li>
+                    <li>If the number is divisible by 5 but not by 3, log "Buzz" instead of the number</li>
                 </ul>
                 
                 <button type="button" id="fizzbuzz" class="btn btn-primary">Run!</button>
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            <div class="col">
+                <h1>Braces Valid</h1>
+                <p>Given a string, write a function that will determine whether the braces  - including parentheses (), square brackets [], and curly brackets {} - within the string are valid. That means that any braces within other braces must close before the outer set closes.</p>
+                <ul>
+                    <li>bracesValid("{{()}}[]") returns true because the inner braces close before the outer braces. Each opening brace has a matching closing brace.</li>
+                    <li>bracesValid("{(})") returns false because the curly braces close before the parentheses, which starts within the curly braces, had a chance to close.</li>
+                </ul>
+                
+                <button type="button" id="bracesValid" class="btn btn-primary">Run!</button>
             </div>
         </div>
     </div>
