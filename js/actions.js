@@ -6,9 +6,12 @@ $(document).ready(function(){
             numArr.push(parseInt(input));
             input = prompt("add another number to the array or just hit enter to signal the arry is complete")
         }
-        
-
         alert(minMaxAvg(numArr));
+
+    });
+    $("#fizzbuzz").click(function(){
+        var input = prompt("enter a number");
+        alert(fizzBuzz(parseInt(input)));
 
     });
 });
