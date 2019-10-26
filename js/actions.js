@@ -14,5 +14,10 @@ $(document).ready(function(){
         alert(validBraces(input));
     });
 
+    $("#bubble").click(function(){
+        var numArr = getNumArrayFromUser();
+        alert(bubbleSort(numArr));
+    });
+
     
 });
