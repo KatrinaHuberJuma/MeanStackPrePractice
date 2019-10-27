@@ -86,3 +86,37 @@ function validBraces(str){
     
     return stack.length === 0;
 }
+
+function coinChange(num){
+    var changeObj = {dollars: 0, quarters: 0, dimes: 0, nickels: 0, pennies:0 };
+    if (num >= 100) {
+        changeObj.dollars = Math.floor(num / 100);
+        num %= 100;
+    }
+    if (num >= 25) {
+        changeObj.quarters = Math.floor(num / 25);
+        num %= 25;
+    }
+    if (num >= 10) {
+        changeObj.dimes = Math.floor(num / 10);
+        num %= 10;
+    }
+    if (num >= 5) {
+        changeObj.nickels = Math.floor(num / 5);
+        num %= 5;
+    }
+    changeObj.pennies = num;
+    return JSON.stringify(changeObj);
+}
+
+// {dollars: 2, dimes: 15, pennies: 5} ==> {dollars: 3, quarters: 2, nickels: 1}
+
+function coinReChange(changeObj){
+    var conversionObj = {dollars: 100, quarters: 25, dimes: 10, nickels: 5, pennies:1 }
+    var sum = 0;
+    for (key in changeObj){
+        var cents = changeObj[key] * conversionObj[key];
+        sum += cents
+    }
+    return coinChange(sum);
+}

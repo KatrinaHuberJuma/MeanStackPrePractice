@@ -18,6 +18,17 @@ $(document).ready(function(){
         var numArr = getNumArrayFromUser();
         alert(bubbleSort(numArr));
     });
+    $("#change").click(function(){
+        var input = prompt("enter a number");
+        alert(coinChange(input));
+    });
+    $("#changeChange").click(function(){
+        var changeObj = {dollars: 0, quarters: 0, dimes: 0, nickels: 0, pennies:0 };
+        for (key in changeObj){
+            changeObj[key] = prompt("How many "+ key + "s?")
+        }
+        alert(coinReChange(changeObj));
+    });
 
     
 });
