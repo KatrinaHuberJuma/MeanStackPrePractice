@@ -30,5 +30,18 @@ $(document).ready(function(){
         alert(coinReChange(changeObj));
     });
 
+
+    $("#search").click(function(){
+        var arr = [1,2,4,6,7,8,10,11,12,15,20]
+        var target = 9;
+        alert("arr = " + arr + " target = " + target + "result = " + binarySearch(arr, target));
+        var target = 1;
+        alert("arr = " + arr + " target = " + target + "result = " + binarySearch(arr, target));
+        var target = 10;
+        alert("arr = " + arr + " target = " + target + "result = " + binarySearch(arr, target));
+        var target = 20;
+        alert("arr = " + arr + " target = " + target + "result = " + binarySearch(arr, target));
+    });
+
     
 });
